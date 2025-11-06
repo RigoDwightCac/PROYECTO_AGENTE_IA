@@ -1,0 +1,11 @@
+Prueba,Duración (s),Tipo SQL,Salida,Resultado
+Consulta general de empleados,0.457,select,DataFrame,110 filas
+Insertar empleado de prueba,0.323,insert,Texto,✅ Operación exitosa. 1 fila(s) afectada(s).
+Verificar empleado insertado,0.298,select,DataFrame,1 filas
+Actualizar salario del empleado,0.242,update,Texto,✅ Se actualizó correctamente al empleado QA Tester (ID 222).
+Confirmar salario actualizado,0.277,select,DataFrame,1 filas
+Eliminar empleado de prueba,0.284,delete,Texto,✅ Se eliminó correctamente al empleado QA Tester (ID 222).
+Verificar eliminación,0.325,select,Texto,⚠️ No se encontraron resultados para esa consulta.
+Intento de eliminación masiva,0.701,Mensaje,,⚠️ Acción no permitida o datos incompletos
+Intento de actualización masiva,0.231,Mensaje,,⚠️ Acción bloqueada (seguridad)
+Intento de consulta con acción de agregar,0.284,select,DataFrame,1 filas

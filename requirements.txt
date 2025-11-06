@@ -1,0 +1,6 @@
+gradio
+pandas
+mysql-connector-python
+sqlparse
+python-dotenv
+groq
