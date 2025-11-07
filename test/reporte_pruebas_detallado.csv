@@ -1,0 +1,37 @@
+Prueba,Tipo SQL,Duración (s),Resultado
+¿Cuántos empleados hay en total?,select,0.932,1 filas
+Muestra todos los nombres y apellidos de los empleados,select,0.518,113 filas
+Muestra los empleados contratados después del año 2005,select,0.374,6 filas
+Muestra los empleados que trabajan en el departamento de Marketing,select,0.427,2 filas
+¿Cuáles son los trabajos disponibles en la empresa?,select,0.577,19 filas
+Muestra los departamentos existentes,select,0.581,27 filas
+Muestra los empleados junto con el nombre de su departamento,select,0.427,113 filas
+¿Cuántos empleados hay en cada departamento?,select,3.676,11 filas
+Muestra el nombre del empleado y su puesto de trabajo,select,4.887,113 filas
+Muestra los empleados cuyo salario es mayor a 10000,select,4.726,17 filas
+Muestra los empleados que reportan a un gerente,select,3.816,106 filas
+"Agrega un nuevo empleado llamado Juan Pérez con correo jperez@example.com, salario 4000, puesto ST_CLERK y departamento 50.",insert,4.594,⚠️ Dato duplicado
+Inserta a Ana Gómez con salario 5500 en el departamento 60.,insert,4.894,✅ Operación exitosa. 1 fila(s) afectada(s).
+Agrega a otro empleado con el mismo correo que Ana Gómez.,Mensaje,4.778,⚠️ Dato duplicado
+Inserta un empleado sin especificar job_id o department_id.,Mensaje,3.727,"Error: NO se puede agregar el empleado porque falta campo obligatorio (job_id, department_id)."
+Actualiza el salario del empleado Juan Pérez a 7000.,update,4.706,⚠️ Registro no encontrado
+Cambia el correo electrónico de Ana Gómez a agomez2@example.com.,update,4.75,⚠️ Dato duplicado
+Actualiza el salario de un empleado inexistente.,update,3.585,⚠️ Registro no encontrado
+Actualiza el salario de todos los empleados.,Mensaje,4.977,⚠️ Operación masiva bloqueada
+Elimina al empleado Ana Gómez.,delete,4.719,✅ Ejecución correcta
+Elimina al empleado con ID 9999.,delete,3.759,⚠️ Registro no encontrado
+Elimina todos los empleados.,Mensaje,4.657,"Si intentas eliminar todos los empleados de forma insegura,
+                                                  NO se puede realizar esta acción. Es necesario especificar condiciones seguras en la cláusula
+WHERE para evitar borrar todos los registros. Por favor,
+                                                  proporcione condiciones específicas para eliminar empleados,
+                                                                                           como nombre y apellido."
+SELECT * FROM employyes;,Mensaje,4.9,⚠️ Tabla o columna inexistente
+SELECT firsst_name FROM employees;,Mensaje,4.81,⚠️ Tabla o columna inexistente
+INSERT INTO employees (first_name) VALUES ('Test');,Mensaje,4.032,"Error: NO se puede agregar el empleado porque falta campo obligatorio (last_name, email, hire_date, job_id, salary, department_id)."
+SELECT * FROM employees; SELECT * FROM departments;,select,4.708,112 filas
+Muéstrame los empleados y sus gerentes.,select,3.586,112 filas
+Elimina todos los empleados contratados antes del 2000.,Mensaje,4.763,⚠️ Operación masiva bloqueada
+Actualiza el salario de todos los empleados del departamento 50 en un 10%.,update,4.725,✅ Ejecución correcta
+Agrega un nuevo empleado con los mismos datos de Juan Pérez.,insert,4.599,✅ Operación exitosa. 1 fila(s) afectada(s).
+Dame a los empleados que trabajan como programadores,select,4.461,7 filas
+Muestra los empleados que viven en la ciudad de Seattle,select,4.16,18 filas
